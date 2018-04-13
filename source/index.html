@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
@@ -12,7 +12,8 @@
       <b class="page-header__logo-title">CAT ENERGY</b>
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">Закрыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -173,12 +174,10 @@
           </li>
         </ul>
         <hr>
-        <ul class="copyright">
-          <li class="copyright__logo-title">HTML Academy</li>
-          <li class="copyright__logo-image">
-            <img src="http://placehold.it/150x100" width="27" height="34" alt="">
-          </li>
-        </ul>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__logo-title">HTML Academy</span>
+            <img class="copyright__logo-image" src="http://placehold.it/150x100" width="27" height="34" alt="">
+        </a>
       </div>
     </footer>
 
