@@ -7,9 +7,9 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-    <img class="page-header__logo-image" src="http://placehold.it/150x100" width="33" height="38" alt="Кэт энерджи">
-    <b class="page-header__logo-title">CAT ENERGY</b>
+    <a class="logo logo--header" href="index.html">
+    <img class="logo-image logo-image--header" src="http://placehold.it/150x100" width="33" height="38" alt="Кэт энерджи">
+    <b class="logo-title logo-title--header">CAT ENERGY</b>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
@@ -31,7 +31,7 @@
   </header>
 
   <main class="form-main">
-    <h2 class="form-main__title">Подбор программы</h2>
+    <h1 class="form-main__title">Подбор программы</h1>
     <p class="form-main__subtitle">
       Заполните анкету и мы подберем
       программу питания для вашего кота
@@ -43,12 +43,12 @@
         <input class="form-main__input form-main__input--text" type="text" id="cat-name" name="cat-name" value="Барсик" required>
         <br>
         <label for="cat-weight">Вес (кг):*</label>
-        <input class="form-main__input form-main__input--text" type="text" id="cat-weight" name="cat-weight" value="7" required>
+        <input class="form-main__input form-main__input--text" type="number" id="cat-weight" name="cat-weight" value="7" required>
         <br>
         <label for="cat-age">Возраст (лет):</label>
-        <input class="form-main__input form-main__input--text" type="text" id="cat-age" name="cat-age" value="7" required>
+        <input class="form-main__input form-main__input--text" type="number" id="cat-age" name="cat-age" value="7">
       </fieldset>
-      <fieldset class="form-main__aim-info">
+      <fieldset class="form-main__aim">
         <legend class="visually-hidden">Цель программы</legend>
         <input class="form-main__input form-main__input--radio" type="radio" id="lose-weight" name="form-aim" value="lose-weight" checked>
         <label for="lose-weight">Похудение</label>
@@ -105,30 +105,28 @@
     <img class="contacts__map" src="http://placehold.it/150x100" width="320" height="362" alt="">
   </section>
 
-<footer class="page-footer">
-  <div class="page-footer__wrapper">
-    <a href="index.html" class="page-footer__logo">
-      <b class="page-footer__logo-title">CAT ENERGY</b>
-    </a>
-    <hr>
-    <ul class="social">
-      <li class="social__button social__button--vk">
-        <span class="visually-hidden">VK</span>
-      </li>
-      <li class="social__button social__button--inst">
-        <span class="visually-hidden">Instagram</span>
-      </li>
-      <li class="social__button social__button--fb">
-        <span class="visually-hidden">Facebook</span>
-      </li>
-    </ul>
-    <hr>
-    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="copyright__logo-title">HTML Academy</span>
-        <img class="copyright__logo-image" src="http://placehold.it/150x100" width="27" height="34" alt="">
-    </a>
-  </div>
-</footer>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="logo logo--footer" href="index.html">
+        <b class="logo-title logo-title--footer">CAT ENERGY</b>
+      </a>
+      <ul class="social">
+        <li class="social__button social__button--vk">
+          <span class="visually-hidden">VK</span>
+        </li>
+        <li class="social__button social__button--inst">
+          <span class="visually-hidden">Instagram</span>
+        </li>
+        <li class="social__button social__button--fb">
+          <span class="visually-hidden">Facebook</span>
+        </li>
+      </ul>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__title">HTML Academy</span>
+        <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="">
+      </a>
+    </div>
+  </footer>
 
 </body>
 </html>
