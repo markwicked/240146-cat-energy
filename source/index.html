@@ -7,9 +7,9 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-      <img class="page-header__logo-image" src="http://placehold.it/150x100" width="33" height="38" alt="Кэт энерджи">
-      <b class="page-header__logo-title">CAT ENERGY</b>
+      <a class="logo logo--header">
+      <img class="logo-image logo-image--header" src="http://placehold.it/150x100" width="33" height="38" alt="Кэт энерджи">
+      <b class="logo-title logo-title--header">CAT ENERGY</b>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
@@ -34,7 +34,7 @@
       <h1 class="page-main__title">Функциональное питание для котов</h1>
       <p class="page-main__slogan">Занялся собой? Займись котом!</p>
       <img class="page-main__image-can" src="http://placehold.it/150x100" width="280" height="270" alt="">
-      <a class="page-main__go-to-form button" href="form.html">Подобрать программу</a>
+      <a class="page-main__to-form button" href="form.html">Подобрать программу</a>
 
       <section class="catalog-preview">
         <div class="catalog-preview__wrapper">
@@ -48,7 +48,6 @@
                 Energy Slim поможет вашему
                 питомцу сбросить лишний вес.
               </p>
-              <hr>
               <a class="catalog-preview__link" href="#">Каталог SLIM</a>
             </li>
             <li class="catalog-preview__item catalog-preview__item--gain-weight">
@@ -60,7 +59,6 @@
                 вашему коту нарастить
                 необходимые мышцы!
               </p>
-              <hr>
               <a class="catalog-preview__link" href="#">Каталог PRO</a>
             </li>
           </ul>
@@ -71,28 +69,28 @@
         <div class="how-it-works__wrapper">
           <h2 class="how-it-works__title">Как это работает</h2>
           <ul class="how-it-works__list">
-            <li class="how-it-works__item how-it-works__item--icon-1">
+            <li class="how-it-works__item how-it-works__item-1">
               <p class="how-it-works__description">
                 Функциональное питание
                 содержит только полезные
                 питательные вещества.
               </p>
             </li>
-            <li class="how-it-works__item how-it-works__item--icon-2">
+            <li class="how-it-works__item how-it-works__item-2">
               <p class="how-it-works__description">
                 Выпускается в виде порошка,
                 который нужно лишь залить
                 кипятком и готово.
               </p>
             </li>
-            <li class="how-it-works__item how-it-works__item--icon-3">
+            <li class="how-it-works__item how-it-works__item-3">
               <p class="how-it-works__description">
                 Замените один-два приема
                 обычной еды на наше
                 функциональное питание.
               </p>
             </li>
-            <li class="how-it-works__item how-it-works__item--icon-4">
+            <li class="how-it-works__item how-it-works__item-4">
               <p class="how-it-works__description">
                 Уже через месяц
                 наслаждайтесь изменениями
@@ -114,28 +112,26 @@
             менял своих привычек и по-прежнему
             спит по 16 часов в день.
           </p>
-          <ul class="example__stats">
-            <li class="example__item">
-              <b class="example__value">5 кг</b>
-              <span class="example__small-text">снижение веса</span>
-            </li>
-            <li class="example__item">
-              <b class="example__value">60 дней</b>
-              <span class="example__small-text">затрачено времени</span>
-            </li>
-            <li class="example__conclusion">
-              <b>Затраты на питание: 15 000 руб.</b>
-            </li>
-          </ul>
+          <table class="example__stats">
+            <tr class="example__tr">
+              <td class="example__td">5 кг</td>
+              <td class="example__td">снижение веса</td>
+            </tr>
+            <tr class="example__tr">
+              <td class="example__td">60 дней</td>
+              <td class="example__td">затрачено времени</td>
+            </tr>
+            <tr class="example__tr example__tr--conclusion">
+              <td class="example__td example__td--conclusion">Затраты на питание: 15 000 руб.</td>
+            </tr>
+          </table>
           <img class="example__cat-before" src="http://placehold.it/150x100" width="311" height="232" alt="">
           <img class="example__cat-after" src="http://placehold.it/150x100" width="251" height="240" alt="">
           <form class="example__toggle" action="https://echo.htmlacademy.ru" method="get">
-            <label>Было
-              <input type="radio" name="before-after" value="before">
-            </label>
-            <label>
-              <input type="radio" name="before-after" value="after">
-              Стало</label>
+            <label for="before">Было</label>
+            <input type="radio" id="before" name="before-after" value="before">
+            <input type="radio" id="after" name="before-after" value="after">
+            <label for="after">Стало</label>
           </form>
         </div>
       </section>
@@ -158,10 +154,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo">
-          <b class="page-footer__logo-title">CAT ENERGY</b>
+        <a class="logo logo--footer">
+          <b class="logo-title logo-title--footer">CAT ENERGY</b>
         </a>
-        <hr>
         <ul class="social">
           <li class="social__button social__button--vk">
             <span class="visually-hidden">VK</span>
@@ -173,10 +168,9 @@
             <span class="visually-hidden">Facebook</span>
           </li>
         </ul>
-        <hr>
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__logo-title">HTML Academy</span>
-            <img class="copyright__logo-image" src="http://placehold.it/150x100" width="27" height="34" alt="">
+          <span class="copyright__title">HTML Academy</span>
+          <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="">
         </a>
       </div>
     </footer>
