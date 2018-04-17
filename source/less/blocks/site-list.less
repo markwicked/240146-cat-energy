@@ -6,10 +6,25 @@
   line-height: 20px;
   text-transform: uppercase;
   list-style: none;
-  outline: 1px dotted black;
+}
+
+.site-list__item {
+  position: relative;
+  height: 66px;
+  &::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  }
 }
 
 .site-list__link {
+  line-height: 66px;
+  vertical-align: middle;
   text-decoration: none;
   color: #000;
   &:hover {
@@ -21,24 +36,21 @@
 }
 
 .site-list__link--active {
+  position: relative;
   cursor: default;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: @color-primary;
+  }
   &:hover {
     opacity: 1;
   }
   &:active {
     opacity: 1;
-  }
-}
-
-.site-list__item--active {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: @color-primary;
   }
 }
