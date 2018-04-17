@@ -1,11 +1,9 @@
 .site-list {
-  margin: 0;
-  padding: 0;
+  .list-reset();
   font-family: "Oswald Medium";
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  list-style: none;
 }
 
 .site-list__item {
@@ -23,10 +21,9 @@
 }
 
 .site-list__link {
+  .links-reset();
   line-height: 66px;
-  vertical-align: middle;
-  text-decoration: none;
-  color: #000;
+  color: #000000;
   &:hover {
     opacity: 0.6;
   }
