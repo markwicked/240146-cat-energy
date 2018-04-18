@@ -3,16 +3,7 @@
   border: none;
   &--close {
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #000000;
-      width: 24px;
-      height: 2px;
-      transform: rotate(45deg);
-    }
+    &::before,
     &::after {
       content: "";
       position: absolute;
@@ -21,6 +12,12 @@
       background-color: #000000;
       width: 24px;
       height: 2px;
-      transform: rotate(45deg * -1);
     }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
