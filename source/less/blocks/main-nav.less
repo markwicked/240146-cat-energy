@@ -1,8 +1,10 @@
 .main-nav__toggle {
   background: none;
   border: none;
+
   &--close {
     position: relative;
+
     &::before,
     &::after {
       content: "";
@@ -13,9 +15,11 @@
       width: 24px;
       height: 2px;
     }
+
     &::before {
       transform: rotate(45deg);
     }
+
     &::after {
       transform: rotate(-45deg);
     }

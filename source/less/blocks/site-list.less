@@ -9,6 +9,7 @@
 .site-list__item {
   position: relative;
   height: 66px;
+
   &::after {
     content: "";
     position: absolute;
@@ -24,9 +25,11 @@
   .links-reset();
   line-height: 66px;
   color: #000000;
+
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -35,6 +38,7 @@
 .site-list__link--active {
   position: relative;
   cursor: default;
+
   &::after {
     content: "";
     position: absolute;
@@ -44,9 +48,11 @@
     height: 2px;
     background-color: @color-primary;
   }
+
   &:hover {
     opacity: 1;
   }
+
   &:active {
     opacity: 1;
   }
