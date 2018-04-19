@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  width: 280px;
+  height: 40px;
+  font-size: @text-size;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: @color-primary;
+
+  &:hover {
+    background-color: @color-primary-darken;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
+}

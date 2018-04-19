@@ -1,0 +1,135 @@
+.example {
+  padding-top: 17px;
+  padding-bottom: 23px;
+  background-color: @gray-background;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: @title-size;
+  line-height: 60px;
+}
+
+.example__description {
+  .font-arial();
+  margin-bottom: 25px;
+}
+
+.example__list {
+  .list-reset();
+  position: relative;
+  width: 122px;
+  height: 54px - 14px;
+  padding-top: 14px;
+  margin-bottom: 32px;
+  text-align: center;
+  border: 1px #cdcdcd solid;
+  border-radius: 2px;
+}
+
+.example__value {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.example__parameter {
+  .font-arial;
+  position: absolute;
+  top: 46px;
+  left: 16px;
+  width: 87px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: @gray-background;
+}
+
+.example__results {
+  display: block;
+  margin-bottom: 34px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__cat-after {
+  display: none;
+}
+
+.example__toggle {
+  margin-top: 29px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 55px;
+    z-index: 10;
+    width: 82px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px #cdcdcd solid;
+    border-radius: 5px;
+  }
+}
+
+.example__label {
+  z-index: 1000;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  &--before {
+    position: relative;
+    padding-right: 56px;
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 9px;
+      left: 61px;
+      z-index: 100;
+      width: 35px;
+      height: 6px;
+      background-color: @color-primary;
+      border-radius: 5px;
+    }
+  }
+
+  &--after {
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 9px;
+      right: 65px;
+      z-index: 100;
+      width: 35px;
+      height: 6px;
+      background-color: @color-primary;
+      border-radius: 5px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.example__input {
+  display: none;
+}
+
+.example__input--before:checked ~ .example__label--before::after {
+  display: block;
+}
+
+.example__input--after:checked ~ .example__label--after::before {
+  display: block;
+}

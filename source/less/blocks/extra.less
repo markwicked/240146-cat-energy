@@ -1,0 +1,80 @@
+.extra {
+  padding-top: 8px;
+}
+
+.extra__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 14px;
+  padding-bottom: 34px;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+  }
+}
+
+.extra__list {
+  .list-reset();
+  margin-bottom: 38px;
+}
+
+.extra__item {
+  position: relative;
+  height: 115px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+  }
+}
+
+.extra__product-name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.extra__product-info {
+  .font-arial();
+  margin-bottom: 11px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.catalog__order-button {
+  font-size: 16px;
+}
+
+.extra__gift {
+  margin-bottom: 35px;
+  width: 280px;
+  height: 289px;
+  background: @color-primary url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+}
+
+.extra__svg {
+  margin: 65px 0 44px 112px;
+}
+
+.extra__text {
+  .font-arial();
+  width: 170px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}

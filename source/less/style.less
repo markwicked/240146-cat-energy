@@ -1,0 +1,51 @@
+@import "normalize";
+@import "mixins";
+@import "variables";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/page-main";
+@import "blocks/button";
+@import "blocks/catalog-preview";
+@import "blocks/advantages";
+@import "blocks/example";
+@import "blocks/contacts";
+@import "blocks/page-footer";
+@import "blocks/logo";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/form-main";
+@import "blocks/form-page";
+@import "blocks/catalog";
+@import "blocks/extra";
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
