@@ -115,8 +115,85 @@
 }
 
 .form-main__info-title {
+  position: relative;
   padding-top: 30px;
   margin-bottom: 33px;
   font-size: 24px;
   line-height: 24px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 99px;
+    height: 3px;
+    background-color: @color-primary;
+  }
+}
+
+.form-main__comment-field {
+  height: 135px;
+  padding-top: 11px;
+  padding-left: 14px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-color: #e7e7e7;
+  margin-left: 10px;
+}
+
+.form-main__input-checkbox {
+  display: none;
+}
+
+.form-main__input-checkbox + .form-main__label {
+  position: relative;
+  padding-left: 46px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px #cfcfcf solid;
+  }
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 21px;
+    height: 16px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:hover {
+    cursor: pointer;
+    &::before {
+      border-color: #bababa;
+    }
+  }
+}
+
+.form-main__input-checkbox:checked + .form-main__label {
+  display: block;
+  opacity: 0.3;
+}
+
+.form-main__additional-info {
+  margin-bottom: 34px;
+}
+
+.form-main__button {
+  margin-bottom: 8px;
+  font-size: 16px;
+  border: none;
+}
+
+.form-main__caption {
+  .font-arialregular();
+  font-size: 14px;
+  line-height: 16px;
 }
