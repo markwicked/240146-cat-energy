@@ -6,7 +6,7 @@
   position: relative;
   padding-top: 30px;
   margin-bottom: 20px;
-  height: 266px - 30px;
+  min-height: 266px - 30px;
   background-color: @gray-background;
 
   &::before {
@@ -62,18 +62,9 @@
 
 .catalog-preview__description {
   .font-arial();
-  position: relative;
-  margin-bottom: 45px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -25px;
-    width: 100%;
-    height: 1px;
-    background-color: #d9d9d9;
-  }
+  min-height: 109px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .catalog-preview__link {
