@@ -1,5 +1,29 @@
-.page-header__logo {
-  display: block;
-  min-height: 66px;
-  border-bottom: 1px solid #e6e6e6;
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: 135px;
+  padding-top: 28px;
+  min-height: 305px - 28px;
+  color: #ffffff;
+  background: @color-primary url("../img/index-background-mobile@1x.jpg") no-repeat;
+}
+
+.page-header__title {
+  .title();
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 36px;
+  font-weight: normal;
+  outline: 1px dotted red;
+}
+
+.page-header__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 }

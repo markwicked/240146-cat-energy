@@ -24,13 +24,17 @@
   text-transform: uppercase;
 }
 
+.form-main__input:invalid {
+  border-color: #ff8282;
+}
+
 .form-main__input--text,
 .form-main__input--email,
 .form-main__input--phone {
   width: 212px;
   height: 14px;
   padding: 14px 0 15px 15px;
-  border: 1px #e6e6e6 solid;
+  border: 1px solid #e6e6e6;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -60,7 +64,7 @@
     left: 0;
     width: 28px;
     height: 28px;
-    border: 1px #e5e5e5 solid;
+    border: 1px solid #e5e5e5;
     border-radius: 50%;
   }
 
@@ -146,7 +150,7 @@
     left: 0;
     width: 28px;
     height: 28px;
-    border: 1px #cfcfcf solid;
+    border: 1px solid #cfcfcf;
   }
 
   &::after {

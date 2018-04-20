@@ -1,9 +1,38 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .main-nav__toggle {
   background: none;
   border: none;
 
+  &--open {
+    position: relative;
+    display: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 24px;
+      height: 18px;
+      background: url("../img/icon-mobile-menu.svg") no-repeat;
+    }
+  }
+
   &--close {
     position: relative;
+    display: block;
 
     &::before,
     &::after {
