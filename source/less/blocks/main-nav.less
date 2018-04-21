@@ -1,7 +1,6 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  outline: 1px dotted black;
 }
 
 @media (min-width: @tablet-width) {
@@ -10,6 +9,16 @@
     justify-content: space-between;
     margin-bottom: 23px;
     padding: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    align-items: flex-end;
+    min-height: 118px;
+    margin-bottom: 77px;
+    padding: 0 110px;
+    outline: 1px dotted black;
   }
 }
 
@@ -25,6 +34,12 @@
 @media (min-width: @tablet-width) {
   .main-nav__flex-container {
     border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__flex-container {
+    padding: 0;
   }
 }
 
