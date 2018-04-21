@@ -13,23 +13,65 @@
   background: @color-primary url("../img/index-background-mobile@1x.jpg") no-repeat;
 }
 
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    color: #000000;
+    background: none;
+  }
+}
+
 .page-header__title {
-  .title();
+  margin: 0;
   margin-bottom: 11px;
-  text-align: center;
-  line-height: 36px;
+  padding: 0 20px;
+  font-size: 36px;
   font-weight: normal;
+  line-height: 36px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__title {
+    margin-bottom: 41px;
+    padding-right: 212px;
+    padding-left: 120px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    outline: 1px dotted red;
+  }
 }
 
 .page-header__slogan {
-  text-align: center;
+  padding: 0 20px;
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__slogan {
+    margin: 0;
+    padding-right: 364px;
+    padding-left: 118px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
 }
 
 .page-header__image-can {
   margin: -138px auto 3px auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__image-can {
+    width: 709px;
+    height: 609px;
+    margin: -73px auto 0 auto;
+    outline: 1px dotted black;
+  }
 }
 
 .page-header__to-form {

@@ -1,4 +1,8 @@
-.logo__image--active {
+.page-header__logo {
+  width: 191px;
+  height: 54px;
+  background: url("../img/logo-mobile.svg") no-repeat center;
+
   &:hover {
     cursor: pointer;
     opacity: 0.8;
@@ -6,5 +10,13 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    width: 173px;
+    height: 58px;
+    background: url("../img/logo-mobile.svg") no-repeat center;
   }
 }
