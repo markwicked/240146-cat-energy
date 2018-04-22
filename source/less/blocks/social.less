@@ -2,13 +2,25 @@
   .list-reset();
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #d9d9d9;
 }
 
+@media (min-width: @tablet-width) {
+  .social {
+    border-bottom: none;
+  }
+}
+
 .social__button {
   margin-right: 37px;
-  outline: 1px dotted red;
+}
+
+@media (min-width: @tablet-width) {
+  .social__button {
+    margin-right: 28px;
+  }
 }
 
 .social__button:last-child {
@@ -24,5 +36,22 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__button--vk .social__svg {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__button--inst .social__svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__button--fb .social__svg {
+    width: 14px;
+    height: 28px;
   }
 }

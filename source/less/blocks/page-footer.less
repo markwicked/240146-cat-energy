@@ -10,10 +10,29 @@
   padding: 0 20px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 708px;
+    padding: 40px 30px 58px 30px;
+  }
+}
+
 .page-footer__logo {
   display: block;
   margin-top: 39px;
+  margin-right: 21px;
   padding-left: 75px;
   padding-bottom: 27px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo {
+    margin-top: 0;
+    padding: 0;
+    border-bottom: none;
+  }
 }
