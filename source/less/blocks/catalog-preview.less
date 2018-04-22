@@ -2,6 +2,12 @@
   padding: 0 20px;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-preview__wrapper {
+    padding: 0 30px;
+  }
+}
+
 .catalog-preview__list {
   .list-reset();
 }
@@ -10,9 +16,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px 6px 20px;
   margin-bottom: 20px;
-  min-height: 266px - 30px;
   background-color: @gray-background;
 
   &::before {
@@ -53,6 +58,45 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-preview__item {
+    margin-bottom: 30px;
+    padding: 76px 275px 47px 54px;
+
+    &::before {
+      top: 92px;
+      left: 446px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim,
+    &--pro {
+      &::after {
+        top: 52px;
+        left: 421px;
+        width: 250px;
+        height: 250px;
+        background-size: 140px 194px;
+        background-position: center;
+        outline: 1px dotted red;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 67px;
+        left: 409px;
+        width: 270px;
+        height: 250px;
+        background-size: 268px 112px;
+        background-position: center;
+        outline: 1px dotted red;
+      }
+    }
+  }
+}
+
 .catalog-preview__item:last-child {
   margin-bottom: 0;
 }
@@ -60,11 +104,19 @@
 .catalog-preview__title {
   margin: 0;
   margin-left: 72px;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
   font-size: 24px;
   font-weight: normal;
   line-height: 37px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-preview__title {
+    margin-left: 0;
+    font-size: 36px;
+    line-height: 37px;
+  }
 }
 
 .catalog-preview__description {
@@ -72,6 +124,21 @@
   min-height: 111px;
   margin-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-preview__description {
+    max-width: 375px;
+    margin-bottom: 41px;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    outline: 1px dotted red;
+  }
+
+  .catalog-preview__item:last-child .catalog-preview__description {
+    max-width: 340px;
+  }
 }
 
 .catalog-preview__link {
@@ -101,5 +168,23 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-preview__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      top: 4px;
+      left: 129px;
+    }
+  }
+
+  .catalog-preview__item:last-child .catalog-preview__link {
+    &::after {
+      left: 123px;
+    }
   }
 }
