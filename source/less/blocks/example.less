@@ -11,6 +11,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example {
+    padding-top: 81px;
+    padding-bottom: 64px;
+    background: linear-gradient(to bottom, #ffffff 217px, @gray-background 217px);
+  }
+}
+
 .example__wrapper {
   display: flex;
   flex-direction: column;
@@ -26,6 +34,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    max-width: 1220px;
+    padding: 0 110px;
+  }
+}
+
 .example__title {
   margin: 0;
   margin-bottom: 23px;
@@ -37,12 +52,13 @@
 @media (min-width: @tablet-width) {
   .example__title {
     margin-bottom: 63px;
+    font-size: 60px;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .example__title {
-    font-size: 60px;
+    margin-bottom: 147px;
   }
 }
 
@@ -59,6 +75,13 @@
     margin-bottom: 54px;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__description {
+    max-width: 433px;
+    margin-bottom: 68px;
   }
 }
 
@@ -81,6 +104,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__flex-container {
+    max-width: 366px;
+    min-height: 152px;
+    outline: 1px dotted red;
+  }
+}
+
 .example__list {
   .list-reset();
   position: relative;
@@ -99,6 +130,14 @@
 
     &:nth-child(2) {
       margin-right: 78px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__list {
+    &:nth-child(2) {
+      margin-right: 0;
     }
   }
 }
@@ -144,6 +183,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__parameter {
+    background-color: @gray-background;
+  }
+}
+
 .example__results {
   margin-left: 47px;
   font-weight: 400;
@@ -161,6 +206,21 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__results {
+    max-width: 330px;
+    margin-left: 0;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__results-sum {
+    margin-left: 60px;
+  }
+}
+
 .example__cat-before,
 .example__cat-after {
   margin-bottom: 33px;
@@ -172,6 +232,14 @@
   .example__cat-after {
     width: 677px;
     height: 499px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__cat-before,
+  .example__cat-after {
+    margin-top: -626px;
+    margin-left: 635px;
     outline: 1px dotted red;
   }
 }
@@ -215,6 +283,13 @@
       background-color: #dcdcdc;
       border: none;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__toggle {
+    margin-top: 25px;
+    margin-left: 647px;
   }
 }
 
