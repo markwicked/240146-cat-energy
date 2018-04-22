@@ -38,16 +38,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 320px;
+  min-height: 480px - 28px;
+  margin: 0 auto;
   padding-top: 28px;
-  min-height: 305px - 28px;
   color: #ffffff;
-  background: @color-primary url("../img/index-background-mobile@1x.jpg") no-repeat;
+  background: linear-gradient(to bottom, @color-primary 305px, #ffffff 305px);
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .page-header__wrapper {
-    min-height: 171px;
-    margin-bottom: 50px;
+    max-width: 708px;
+    min-height: 0;
     padding-left: 120px;
     align-items: flex-start;
     color: #000000;
@@ -57,8 +61,9 @@
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
-    margin-bottom: 52px;
-    padding-left: 190px;
+    max-width: 1220px;
+    // margin-bottom: 52px;
+    padding-left: 0;
   }
 }
 
@@ -87,11 +92,13 @@
 @media (min-width: @desktop-width) {
   .page-header__title {
     max-width: 482px;
+    margin-left: -91px;
   }
 }
 
 .page-header__slogan {
   max-width: 280px;
+  margin-bottom: 28px;
   padding: 0 20px;
   font-size: 14px;
   line-height: 14px;
@@ -103,6 +110,7 @@
   .page-header__slogan {
     max-width: 619px;
     margin: 0;
+    margin-bottom: 47px;
     padding: 0;
     font-size: 20px;
     line-height: 20px;
@@ -113,12 +121,12 @@
 @media (min-width: @desktop-width) {
   .page-header__slogan {
     max-width: 482px;
+    margin-left: -91px;
+    margin-bottom: 51px;
   }
 }
 
 .page-header__image-can {
-  align-self: center;
-  margin-top: -138px;
   margin-bottom: 3px;
 }
 
@@ -141,13 +149,10 @@
     width: 552px;
     height: 499px;
     margin-top: -367px;
-    margin-right: 328px;
-    padding-bottom: 55px;
+    margin-left: 328px;
+    padding-bottom: 56px;
+    outline: 1px dotted red;
   }
-}
-
-.page-header__to-form {
-  align-self: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -155,7 +160,6 @@
     align-self: flex-start;
     order: 4;
     z-index: 100;
-    margin-left: 119px;
   }
 }
 
@@ -163,6 +167,6 @@
   .page-header__to-form {
     align-self: flex-start;
     margin-top: 0;
-    margin-left: 190px;
+    margin-left: -91px;
   }
 }
