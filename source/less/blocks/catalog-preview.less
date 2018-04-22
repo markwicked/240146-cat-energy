@@ -8,8 +8,26 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-preview__wrapper {
+    padding: 0 110px;
+  }
+}
+
 .catalog-preview__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  outline: 1px dotted red;
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-preview__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .catalog-preview__item {
@@ -70,8 +88,7 @@
       height: 200px;
     }
 
-    &--slim,
-    &--pro {
+    &--slim {
       &::after {
         top: 52px;
         left: 421px;
@@ -90,6 +107,48 @@
         width: 270px;
         height: 250px;
         background-size: 268px 112px;
+        background-position: center;
+        outline: 1px dotted red;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-preview__item {
+    flex-basis: 570px - 52px;
+    margin-bottom: 0;
+    padding-top: 77px;
+    padding-left: 52px;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    &::before {
+      top: 48px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: 15px;
+        left: 26px;
+        width: 150px;
+        height: 150px;
+        background-size: 70px 97px;
+        background-position: center;
+        outline: 1px dotted red;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 23px;
+        left: 26px;
+        width: 150px;
+        height: 150px;
+        background-size: 134px 56px;
         background-position: center;
         outline: 1px dotted red;
       }
@@ -119,6 +178,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-preview__title {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
 .catalog-preview__description {
   .font-arial();
   min-height: 111px;
@@ -138,6 +204,19 @@
 
   .catalog-preview__item:last-child .catalog-preview__description {
     max-width: 340px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-preview__description {
+    min-height: 0;
+    max-width: 465px;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .catalog-preview__item:last-child .catalog-preview__description {
+    max-width: 445px;
   }
 }
 
