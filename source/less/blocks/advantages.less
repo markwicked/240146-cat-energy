@@ -8,6 +8,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    padding: 0 110px;
+  }
+}
+
 .advantages {
   padding-bottom: 42px;
 }
@@ -41,6 +47,15 @@
     flex-wrap: wrap;
     align-content: space-between;
     min-height: 548px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-height: 228px;
+    outline: 1px dotted black;
   }
 }
 
@@ -104,8 +119,8 @@
         top: 88px;
         left: 117px;
         z-index: -1;
-        color: #f2f2f2;
         font-size: 281px;
+        color: #f2f2f2;
       }
     }
 
@@ -116,8 +131,8 @@
         top: 88px;
         left: 117px;
         z-index: -1;
-        color: #f2f2f2;
         font-size: 281px;
+        color: #f2f2f2;
       }
     }
 
@@ -128,8 +143,8 @@
         top: 88px;
         left: 117px;
         z-index: -1;
-        color: #f2f2f2;
         font-size: 281px;
+        color: #f2f2f2;
       }
     }
 
@@ -140,8 +155,8 @@
         top: 88px;
         left: 117px;
         z-index: -1;
-        color: #f2f2f2;
         font-size: 281px;
+        color: #f2f2f2;
       }
     }
 
@@ -149,6 +164,12 @@
       width: 80px;
       height: 80px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    flex-basis: 245px;
   }
 }
 
