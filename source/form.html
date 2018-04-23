@@ -44,14 +44,18 @@
       <form class="form-main__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form-main__cat-info form-main__fieldset">
           <legend class="visually-hidden">Информация о коте</legend>
-          <label class="form-main__label" for="cat-name">Имя:*</label>
-          <input class="form-main__input form-main__input--text" type="text" id="cat-name" name="cat-name" value="Барсик" required>
-          <br>
-          <label class="form-main__label" for="cat-weight">Вес (кг):*</label>
-          <input class="form-main__input form-main__input--text" type="number" id="cat-weight" name="cat-weight" value="7" required>
-          <br>
-          <label class="form-main__label" for="cat-age">Возраст (лет):</label>
-          <input class="form-main__input form-main__input--text" type="number" id="cat-age" name="cat-age" value="7">
+          <div class="form-main__item">
+            <label class="form-main__label" for="cat-name">Имя:*</label>
+            <input class="form-main__input form-main__input--text" type="text" id="cat-name" name="cat-name" value="Барсик" required>
+          </div>
+          <div class="form-main__item">
+            <label class="form-main__label" for="cat-weight">Вес (кг):*</label>
+            <input class="form-main__input form-main__input--text" type="number" id="cat-weight" name="cat-weight" value="7" required>
+          </div>
+          <div class="form-main__item">
+            <label class="form-main__label" for="cat-age">Возраст (лет):</label>
+            <input class="form-main__input form-main__input--text" type="number" id="cat-age" name="cat-age" value="7">
+          </div>
         </fieldset>
         <fieldset class="form-main__aim form-main__fieldset">
           <legend class="visually-hidden">Цель программы</legend>
