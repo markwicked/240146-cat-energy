@@ -35,7 +35,7 @@
       </nav>
     </header>
 
-    <main class="form-main form-page__form-main wrapper">
+    <main class="form-main form-page__form-main">
       <h1 class="form-main__title">Подбор программы</h1>
       <p class="form-main__subtitle">
         Заполните анкету и мы подберем
@@ -60,25 +60,28 @@
         <fieldset class="form-main__aim form-main__fieldset">
           <legend class="visually-hidden">Цель программы</legend>
           <div class="form-main__item-radio">
-            <input class="form-main__input form-main__input--radio" type="radio" id="lose-weight" name="form-aim" value="lose-weight" checked>
+            <input class="form-main__radio" type="radio" id="lose-weight" name="form-aim" value="lose-weight" checked>
             <label class="form-main__label" for="lose-weight">Похудение</label>
           </div>
           <div class="form-main__item-radio">
-            <input class="form-main__input form-main__input--radio" type="radio" id="gain-weight" name="form-aim" value="gain-weight">
+            <input class="form-main__radio" type="radio" id="gain-weight" name="form-aim" value="gain-weight">
             <label class="form-main__label" for="gain-weight">Набор массы</label>
           </div>
           <div class="form-main__item-radio">
-            <input class="form-main__input form-main__input--radio" type="radio" id="not-specified" name="form-aim" value="not-specified">
+            <input class="form-main__radio" type="radio" id="not-specified" name="form-aim" value="not-specified">
             <label class="form-main__label" for="not-specified">Не знаю (нужен ваш совет)</label>
           </div>
         </fieldset>
         <fieldset class="form-main__owner-info form-main__fieldset">
           <legend class="form-main__owner-title form-main__info-title">Контактные данные (владельца кота)</legend>
-          <label class="form-main__label form-main__label--text" for="owner-email">E-mail:*</label>
-          <input class="form-main__input form-main__input--email" type="email" id="owner-email" name="owner-email" value="kuklachev@gmail.com" required>
-          <br>
-          <label class="form-main__label form-main__label--text" for="owner-phone">Телефон:*</label>
-          <input class="form-main__input form-main__input--phone" type="tel" id="owner-phone" name="owner-phone" value="8(960)900-60-90" required>
+          <div class="form-main__item-text">
+            <label class="form-main__label form-main__label--text form-main__label--owner" for="owner-email">E-mail:*</label>
+            <input class="form-main__input form-main__input--email" type="email" id="owner-email" name="owner-email" value="kuklachev@gmail.com" required>
+          </div>
+          <div class="form-main__item-text">
+            <label class="form-main__label form-main__label--text form-main__label--owner" for="owner-phone">Телефон:*</label>
+            <input class="form-main__input form-main__input--phone" type="tel" id="owner-phone" name="owner-phone" value="8 (960) 900-60-90" required>
+          </div>
         </fieldset>
         <fieldset class="form-main__comment form-main__fieldset">
           <legend class="form-main__comment-title form-main__info-title">Комментарий</legend>
@@ -86,16 +89,16 @@
         </fieldset>
         <fieldset class="form-main__additional-info form-main__fieldset">
           <legend class="form-main__additional-title form-main__info-title">Дополнительно</legend>
-          <input class="form-main__input form-main__input-checkbox" type="checkbox" id="no-sugar" name="no-sugar" value="no-sugar" checked>
+          <input class="form-main__checkbox" type="checkbox" id="no-sugar" name="no-sugar" value="no-sugar" checked>
           <label class="form-main__label" for="no-sugar">Сахарозаменитель</label>
           <br>
-          <input class="form-main__input form-main__input-checkbox" type="checkbox" id="water" name="water" value="water">
+          <input class="form-main__checkbox" type="checkbox" id="water" name="water" value="water">
           <label class="form-main__label" for="water">Питьевая вода</label>
           <br>
-          <input class="form-main__input form-main__input-checkbox" type="checkbox" id="milk" name="milk" value="milk">
+          <input class="form-main__checkbox" type="checkbox" id="milk" name="milk" value="milk">
           <label class="form-main__label" for="milk">Молоко</label>
           <br>
-          <input class="form-main__input form-main__input-checkbox" type="checkbox" id="vitamins" name="vitamins" value="vitamins">
+          <input class="form-main__checkbox" type="checkbox" id="vitamins" name="vitamins" value="vitamins">
           <label class="form-main__label" for="vitamins">Витамины</label>
         </fieldset>
         <input class="form-main__button button" type="submit" value="Отправить заявку">
