@@ -1,8 +1,8 @@
 .form-main {
   display: flex;
   flex-direction: column;
-  max-width: 1220px;
   margin: 0 auto;
+  max-width: 1220px;
   padding-top: 14px;
 }
 
@@ -64,8 +64,7 @@
 .form-main__input {
   flex-grow: 1;
   box-sizing: border-box;
-  min-width: 10px;
-  // width for IE11
+  width: 100%;
   height: 45px;
   padding: 13px 10px 14px 15px;
   border: 1px solid #e6e6e6;
@@ -189,14 +188,53 @@
   background-size: 20px 20px;
 }
 
+.form-main__comment {
+  padding: 0 20px;
+}
+
+.form-main__comment-title {
+  padding: 0;
+  padding-top: 28px;
+  margin-bottom: 35px;
+}
+
 .form-main__comment-field {
-  min-height: 135px;
-  padding-top: 11px;
-  padding-left: 14px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 149px;
+  padding: 12px 12px 0 14px;
   font-size: 16px;
   text-transform: uppercase;
   border-color: #e7e7e7;
-  margin-left: 10px;
+  outline: none;
+
+  &:hover {
+    border-color: #cfcfcf;
+  }
+
+  &:focus {
+    border-color: #4d4d4d;
+  }
+}
+
+.form-main__additional-info {
+  margin-bottom: 35px;
+  padding: 0 20px;
+}
+
+.form-main__additional-title {
+  padding: 0;
+  padding-top: 28px;
+  margin-bottom: 37px;
+}
+
+.form-main__item-checkbox {
+  display: flex;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form-main__checkbox {
@@ -205,7 +243,9 @@
 
 .form-main__checkbox + .form-main__label {
   position: relative;
+  padding-top: 5px;
   padding-left: 46px;
+  padding-bottom: 6px;
 
   &::before {
     content: "";
@@ -249,18 +289,19 @@
   }
 }
 
-.form-main__additional-info {
-  margin-bottom: 34px;
-}
-
 .form-main__button {
-  margin-bottom: 8px;
+  margin: 0 20px;
+  margin-bottom: 21px;
   font-size: 16px;
   border: none;
 }
 
 .form-main__caption {
   .font-arial();
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 20px;
   font-size: 14px;
   line-height: 16px;
+  align-self: center;
 }
