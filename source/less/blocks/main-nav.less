@@ -1,15 +1,80 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    align-items: flex-end;
+    width: 1220px;
+    min-height: 118px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.main-nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+  padding: 0 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__container {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__container {
+    padding: 0;
+  }
+}
+
 .main-nav__toggle {
   background: none;
   border: none;
 
+  &--open {
+    position: relative;
+    display: none;
+    width: 24px;
+    height: 18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 18px;
+      background: url("../img/icon-mobile-menu.svg") no-repeat;
+    }
+  }
+
   &--close {
     position: relative;
+    display: block;
+    width: 24px;
+    height: 18px;
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 0;
+      top: 8px;
       left: 0;
       background-color: #000000;
       width: 24px;
@@ -23,5 +88,11 @@
     &::after {
       transform: rotate(-45deg);
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
   }
 }

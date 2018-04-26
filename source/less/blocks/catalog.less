@@ -1,40 +1,122 @@
 .catalog {
+  max-width: 1220px;
+  margin: 0 auto;
   padding-top: 15px;
 }
 
-.catalog__title {
-  .title();
-  position: relative;
-  padding-bottom: 30px;
-  line-height: 60px;
+@media (min-width: @tablet-width) {
+  .catalog {
+    padding-top: 30px;
+  }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ededed;
+@media (min-width: @desktop-width) {
+  .catalog {
+    padding-top: 70px;
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  padding: 0 20px;
+  padding-bottom: 28px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  border-bottom: 1px solid #ededed;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    margin-bottom: 137px;
+    font-size: 60px;
+    line-height: 60px;
+    border-bottom: none;
   }
 }
 
 .catalog__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    max-width: 1220px;
+  }
 }
 
 .catalog__item {
-  position: relative;
-  min-height: 209px;
+  display: flex;
+  flex-direction: column;
+  // align-self: center;
+  padding: 0 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ededed;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ededed;
+@media (min-width: @tablet-width) {
+  .catalog__item {
+    align-items: center;
+    min-width: 324px;
+    height: 431px;
+    margin-bottom: 140px;
+    padding: 0;
+    background-color: @gray-background;
+  }
+
+  .catalog__item:nth-child(7) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item {
+    min-width: 245px;
+    height: 431px;
+    margin-bottom: 142px;
+  }
+
+  .catalog__item:nth-child(5),
+  .catalog__item:nth-child(6),
+  .catalog__item:nth-child(7) {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__item-inner {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item-inner {
+    flex-direction: column;
+  }
+}
+
+.catalog__image {
+  vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__image {
+    margin-top: -60px;
+    margin-bottom: 30px;
+    width: 161px;
+    height: 172px;
   }
 }
 
@@ -43,45 +125,78 @@
 }
 
 .catalog__product-name {
+  display: block;
+  max-width: 75px;
+  margin-top: 22px;
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__product-name {
+    max-width: 130px;
+    margin-left: 17px;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .catalog__product-info {
   .font-arial();
+  width: 140px;
+  margin-top: 10px;
   font-size: 12px;
   line-height: 16px;
 }
 
-.catalog__more {
-  position: relative;
-  padding-top: 79px;
-  padding-bottom: 25px;
+.catalog__tr .catalog__td:nth-child(2) {
+  text-align: right;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ededed;
+@media (min-width: @tablet-width) {
+  .catalog__tr {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog__td {
+  padding: 0;
+}
+
+.catalog__more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 79px 20px 25px 20px;
+  border-bottom: 1px solid #ededed;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__more {
+    width: 322px;
+    height: 430px;
+    padding: 0;
+    border: 1px solid #e6e6e6;
   }
 }
 
 .catalog__more-title {
+  position: relative;
   display: block;
   margin-bottom: 8px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  outline: 1px dotted red;
 
   &::before {
     content: "";
     position: absolute;
-    top: 39px;
-    left: 125px;
+    top: -39px;
+    left: 87px;
     width: 30px;
     height: 2px;
     background-color: #d3d3d3;
@@ -90,8 +205,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 26px;
-    left: 139px;
+    top: -53px;
+    left: 101px;
     width: 2px;
     height: 30px;
     background-color: #d3d3d3;
@@ -107,6 +222,7 @@
 }
 
 .catalog__more-button {
+  width: 100%;
   font-size: 16px;
   color: #444444;
   background-color: #f2f2f2;

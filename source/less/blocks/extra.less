@@ -1,24 +1,17 @@
 .extra {
+  max-width: 1220px;
+  padding: 0 20px;
   padding-top: 8px;
 }
 
 .extra__title {
-  position: relative;
   margin: 0;
-  margin-bottom: 14px;
+  padding-top: 20px;
   padding-bottom: 34px;
   font-size: 24px;
+  font-weight: 400;
   line-height: 24px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ededed;
-  }
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .extra__list {
@@ -27,18 +20,9 @@
 }
 
 .extra__item {
-  position: relative;
-  height: 115px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ededed;
-  }
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ededed;
 }
 
 .extra__product-name {
@@ -51,9 +35,14 @@
 
 .extra__product-info {
   .font-arial();
+  width: 280px;
   margin-bottom: 11px;
   font-size: 14px;
   line-height: 14px;
+}
+
+.extra__td:nth-child(2) {
+  text-align: right;
 }
 
 .catalog__order-button {
@@ -63,7 +52,7 @@
 .extra__gift {
   margin-bottom: 35px;
   width: 280px;
-  height: 289px;
+  min-height: 289px;
   background: @color-primary url("../img/gift-photo-mobile@1x.jpg") no-repeat;
 }
 
