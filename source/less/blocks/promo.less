@@ -21,6 +21,8 @@
 
 @media (min-width: @desktop-width) {
   .promo {
+    display: flex;
+    flex-direction: column;
     padding-top: 193px;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -39,12 +41,15 @@
     margin-left: 88px;
     padding: @padding-tablet;
     padding-bottom: 529px;
+    outline: 1px dotted black;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo__wrapper {
-    margin-left: 160px;
+    width: 1220px - 160px;
+    margin: 0 auto;
+    padding-bottom: 268px;
   }
 }
 
@@ -114,7 +119,7 @@
   .promo__picture {
     position: absolute;
     top: 232px;
-    right: 30px;
+    right: 60px;
     z-index: -1;
     width: 709px;
     height: 609px;
@@ -124,7 +129,7 @@
 @media (min-width: @desktop-width) {
   .promo__picture {
     top: -50px;
-    right: 172px;
+    right: 12px;
     z-index: 1;
   }
 }
@@ -138,164 +143,5 @@
   .promo__to-form {
     display: inline-block;
     width: 245px;
-  }
-}
-
-
-// 123
-
-.page-header__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  padding-top: 27px;
-  color: #ffffff;
-  background: linear-gradient(to bottom, @color-primary 305px, #ffffff 305px);
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 320px 305px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__wrapper {
-    align-self: center;
-    align-items: flex-start;
-    margin: 0 30px;
-    padding-top: 31px;
-    padding-left: 90px;
-    color: #000000;
-    background: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    width: 1220px;
-    margin: 0;
-    padding-top: 30px;
-    padding-left: 160px;
-  }
-}
-
-.page-header__title {
-  max-width: 280px;
-  margin: 0;
-  margin-bottom: 11px;
-  padding: 0 20px;
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  text-align: center;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__title {
-    max-width: 427px;
-    margin-bottom: 41px;
-    padding: 0;
-    font-size: 60px;
-    line-height: 60px;
-    text-align: left;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__title {
-    max-width: 482px;
-  }
-}
-
-.page-header__slogan {
-  max-width: 280px;
-  margin-bottom: 28px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__slogan {
-    max-width: 619px;
-    margin: 0;
-    margin-bottom: 47px;
-    padding: 0;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: left;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__slogan {
-    max-width: 482px;
-    margin-bottom: 51px;
-  }
-}
-
-.page-header__image-can {
-  margin-bottom: 0;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__picture {
-    order: 4;
-    margin-top: -79px;
-    margin-left: -91px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__image-can {
-    align-self: center;
-    order: 4;
-    z-index: 10;
-    margin-bottom: 0;
-    vertical-align: bottom;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__image-can {
-    align-self: flex-end;
-    margin-top: -286px;
-    margin-left: 461px;
-    padding-bottom: 56px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__to-form {
-    align-self: flex-start;
-    order: 3;
-    z-index: 100;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__to-form {
-    align-self: flex-start;
-    margin-top: 0;
-    margin-left: -91px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header123 {
-    background: linear-gradient(to right, #ffffff 50%, @color-primary 50%);
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
-      background-size: 720px 696px;
-    }
   }
 }
