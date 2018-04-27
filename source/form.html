@@ -42,13 +42,15 @@
     </header>
 
     <main class="form-main form-page__form-main">
-      <h1 class="form-main__title">Подбор программы</h1>
-      <p class="form-main__subtitle">
-        Заполните анкету и мы подберем
-        программу питания для вашего кота
-      </p>
+      <div class="wrapper">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <p class="form-main__subtitle">
+          Заполните анкету и мы подберем
+          программу питания для вашего кота
+        </p>
+      </div>
       <form class="form-main__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-main__cat">
+        <div class="form-main__cat wrapper">
           <fieldset class="form-main__cat-info form-main__fieldset">
             <legend class="visually-hidden">Информация о коте</legend>
             <div class="form-main__item-text">
@@ -81,8 +83,10 @@
           </fieldset>
         </div>
         <fieldset class="form-main__owner-info form-main__fieldset">
-          <legend class="form-main__owner-title form-main__info-title">Контактные данные (владельца кота)</legend>
-          <div class="form-main__owner-wrapper">
+          <div class="form-main__title-container">
+            <legend class="form-main__owner-title form-main__info-title wrapper">Контактные данные (владельца кота)</legend>
+          </div>
+          <div class="form-main__owner-wrapper wrapper">
             <div class="form-main__item-text form-main__item-text--owner-data">
               <label class="form-main__label form-main__label--text form-main__label--owner" for="owner-email">E-mail:*</label>
               <input class="form-main__input form-main__input--email" type="email" id="owner-email" name="owner-email" value="kuklachev@gmail.com" required>
@@ -105,12 +109,18 @@
           </div>
         </fieldset>
         <fieldset class="form-main__comment form-main__fieldset">
-          <legend class="form-main__comment-title form-main__info-title">Комментарий</legend>
-          <textarea class="form-main__comment-field" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="form-main__title-container">
+            <legend class="form-main__comment-title form-main__info-title wrapper">Комментарий</legend>
+          </div>
+          <div class="form-main__comment-container wrapper">
+            <textarea class="form-main__comment-field" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form-main__additional-info form-main__fieldset">
-          <legend class="form-main__additional-title form-main__info-title">Дополнительно</legend>
-          <div class="form-main__additional-wrapper">
+          <div class="form-main__title-container">
+            <legend class="form-main__additional-title form-main__info-title wrapper">Дополнительно</legend>
+          </div>
+          <div class="form-main__additional-wrapper wrapper">
             <div class="form-main__item-checkbox">
               <input class="form-main__checkbox" type="checkbox" id="no-sugar" name="no-sugar" value="no-sugar" checked>
               <label class="form-main__label" for="no-sugar">Сахарозаменитель</label>
@@ -129,8 +139,10 @@
             </div>
           </div>
         </fieldset>
-        <input class="form-main__button button" type="submit" value="Отправить заявку">
-        <p class="form-main__caption">* — Обязательные поля</p>
+        <div class="wrapper wrapper--form-main">
+          <input class="form-main__button button" type="submit" value="Отправить заявку">
+          <p class="form-main__caption">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
 
