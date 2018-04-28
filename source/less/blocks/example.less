@@ -1,6 +1,6 @@
 .example {
   padding-top: 17px;
-  padding-bottom: 36px;
+  padding-bottom: 35px;
   background-color: @gray-background;
 }
 
@@ -25,7 +25,7 @@
   flex-direction: column;
   max-width: 280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: @padding-mobile;
 }
 
 @media (min-width: @tablet-width) {
@@ -86,19 +86,19 @@
   }
 }
 
-.example__flex-container {
+.example__stats {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
   max-width: 280px;
-  min-height: 109px;
   margin-bottom: 34px;
 }
 
+
 @media (min-width: @tablet-width) {
-  .example__flex-container {
+  .example__stats {
     align-items: flex-start;
     max-width: 708px;
     margin-bottom: 50px;
@@ -106,7 +106,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .example__flex-container {
+  .example__stats {
     max-width: 366px;
     min-height: 152px;
   }
@@ -116,7 +116,7 @@
   .list-reset();
   position: relative;
   width: 122px;
-  min-height: 54px - 14px;
+  height: 40px;
   padding-top: 14px;
   text-align: center;
   border: 1px solid #cdcdcd;
@@ -161,7 +161,6 @@
   top: 46px;
   left: 19px;
   width: 82px;
-  min-height: 25px;
   font-size: 12px;
   line-height: 12px;
   background-color: @gray-background;
@@ -190,6 +189,7 @@
 }
 
 .example__results {
+  margin-top: 36px;
   margin-left: 47px;
   font-weight: 400;
   line-height: 20px;
@@ -223,8 +223,23 @@
 
 .example__cat-before,
 .example__cat-after {
-  margin-bottom: 33px;
+  align-self: center;
+  margin-bottom: 16px;
   vertical-align: bottom;
+}
+
+.example__cat-before-picture {
+  display: block;
+  max-width: none;
+  width: 320px;
+  height: 240px;
+}
+
+.example__cat-after-picture {
+  display: none;
+  max-width: none;
+  width: 320px;
+  height: 240px;
 }
 
 @media (min-width: @tablet-width) {
@@ -241,14 +256,6 @@
     margin-top: -626px;
     margin-left: 635px;
   }
-}
-
-.example__cat-before {
-  align-self: center;
-}
-
-.example__cat-after {
-  display: none;
 }
 
 .example__toggle {
