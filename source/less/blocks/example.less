@@ -8,15 +8,15 @@
   .example {
     padding-top: 44px;
     padding-bottom: 69px;
-    background: linear-gradient(to bottom, #ffffff 50%, @gray-background 50%);
+    background: linear-gradient(to bottom, #ffffff 619px, @gray-background 619px);
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    padding-top: 81px;
-    padding-bottom: 68px;
-    background: linear-gradient(to bottom, #ffffff 217px, @gray-background 217px);
+    padding-top: 0;
+    padding-bottom: 75px;
+    background: linear-gradient(to bottom, #ffffff 127px, @gray-background 127px);
   }
 }
 
@@ -37,6 +37,7 @@
 
 @media (min-width: @desktop-width) {
   .example__wrapper {
+    position: relative;
     max-width: 1220px;
     padding: 0 110px;
   }
@@ -52,6 +53,7 @@
 
 @media (min-width: @tablet-width) {
   .example__title {
+    margin-top: -8px;
     margin-bottom: 63px;
     font-size: 60px;
   }
@@ -101,7 +103,7 @@
   .example__stats {
     align-items: flex-start;
     max-width: 708px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -109,6 +111,7 @@
   .example__stats {
     max-width: 366px;
     min-height: 152px;
+    margin-bottom: 0;
   }
 }
 
@@ -243,18 +246,26 @@
 }
 
 @media (min-width: @tablet-width) {
-  .example__cat-before,
-  .example__cat-after {
+  .example__cat-before-picture,
+  .example__cat-after-picture {
     width: 677px;
     height: 499px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__cat-before,
+  .example__cat-after {
+    margin-bottom: 11px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example__cat-before,
   .example__cat-after {
-    margin-top: -626px;
-    margin-left: 635px;
+    position: absolute;
+    top: -60px;
+    right: 77px;
   }
 }
 
@@ -294,8 +305,9 @@
 
 @media (min-width: @desktop-width) {
   .example__toggle {
-    margin-top: 25px;
-    margin-left: 647px;
+    position: absolute;
+    top: 495px;
+    right: 111px;
   }
 }
 
@@ -366,6 +378,7 @@
         background-color: #ffffff;
         border: 1px solid #dfdfdf;
         border-radius: 50%;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
       }
     }
 
@@ -383,6 +396,15 @@
         background-color: #68b738;
         border-radius: 50%;
       }
+    }
+
+    &:hover::before {
+      border-color: #e9e9e9;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active::before {
+      border: 2px solid @color-primary;
     }
   }
 }
