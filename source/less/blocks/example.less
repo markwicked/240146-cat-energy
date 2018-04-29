@@ -23,14 +23,14 @@
 .example__wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 280px;
+  width: 280px;
   margin: 0 auto;
   padding: @padding-mobile;
 }
 
 @media (min-width: @tablet-width) {
   .example__wrapper {
-    max-width: 708px;
+    width: 708px;
     padding: 0 30px;
   }
 }
@@ -38,8 +38,8 @@
 @media (min-width: @desktop-width) {
   .example__wrapper {
     position: relative;
-    max-width: 1220px;
-    padding: 0 110px;
+    width: 1220px;
+    padding: 0;
   }
 }
 
@@ -264,8 +264,8 @@
   .example__cat-before,
   .example__cat-after {
     position: absolute;
-    top: -60px;
-    right: 77px;
+    top: -48px;
+    left: 570px;
   }
 }
 
@@ -307,7 +307,7 @@
   .example__toggle {
     position: absolute;
     top: 495px;
-    right: 111px;
+    right: 0;
   }
 }
 
