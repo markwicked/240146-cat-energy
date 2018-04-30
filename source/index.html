@@ -146,23 +146,31 @@
             </ul>
             <b class="example__results">Затраты на питание: <span class="example__results-sum">15 000 руб.</span></b>
           </div>
-          <picture class="example__cat-before">
-            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-            <img class="example__cat-before-picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png" alt="Кот до похудения">
-          </picture>
-          <picture class="example__cat-after">
-            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-            <img class="example__cat-after-picture" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после похудения">
-          </picture>
-          <form class="example__toggle" action="https://echo.htmlacademy.ru" method="post">
-            <input class="example__input example__input--before" type="radio" id="before" name="before-after" value="before" checked>
-            <label class="example__label example__label--before" for="before">Было</label>
-            <input class="example__input example__input--after" type="radio" id="after" name="before-after" value="after">
-            <label class="example__label example__label--after" for="after">Стало</label>
-          </form>
-        </div>
+          <div class="slider">
+            <div class="slider__pictures">
+              <picture class="slider__cat-before">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="slider__cat-before-picture" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png" alt="Кот до похудения">
+              </picture>
+              <picture class="slider__cat-after">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="slider__cat-after-picture" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после похудения">
+              </picture>
+            </div>
+            <div class="slider__toggle slider__toggle--mobile">
+              <input class="slider__input slider__input--before" type="radio" id="before" name="before-after" value="before" checked>
+              <label class="slider__label slider__label--before" for="before">Было</label>
+              <input class="slider__input slider__input--after" type="radio" id="after" name="before-after" value="after">
+              <label class="slider__label slider__label--after" for="after">Стало</label>
+            </div>
+            <div class="slider__toggle slider__toggle--tablet">
+              <label class="slider__range-label slider__range-label--before">Было</label>
+              <input class="slider__range" type="range" value="2" min="1" max="3">
+              <label class="slider__range-label slider__range-label--after">Стало</label>
+            </div>
+          </div>
       </section>
 
       <section class="contacts">
