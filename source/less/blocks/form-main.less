@@ -14,7 +14,7 @@
 
 @media (min-width: @desktop-width) {
   .form-main {
-    padding-top: 71px;
+    padding-top: 72px;
     padding-bottom: 61px;
   }
 }
@@ -130,9 +130,35 @@
   padding-right: 15px;
 }
 
-.form-main__label {
+.form-main__label:not(.form-main__label--owner) {
   font-size: 16px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .form-main__label:not(.form-main__label--owner) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form-main__label--owner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-main__span {
+  margin-right: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .form-main__span {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -170,6 +196,7 @@
     border-color: #ff8282;
   }
 }
+
 
 @media (min-width: @tablet-width) {
   .form-main__input {
@@ -428,22 +455,6 @@
   }
 }
 
-.form-main__label--owner {
-  padding-right: 10px;
-}
-
-@media (min-width: @tablet-width) {
-  .form-main__label--owner {
-    padding-right: 19px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form-main__item-text:nth-child(3) .form-main__label--owner {
-    padding-right: 14px;
-  }
-}
-
 .form-main__input--email,
 .form-main__input--phone {
   padding-right: 13%;
@@ -472,10 +483,10 @@
 @media (min-width: @tablet-width) {
   .form-main__input--email,
   .form-main__input--phone {
-    padding-right: 9%;
+    padding-right: 7%;
 
     &:focus {
-      padding-right: 9%;
+      padding-right: 7%;
     }
   }
 }
@@ -483,6 +494,7 @@
 @media (min-width: @desktop-width) {
   .form-main__input--email {
     width: 486px;
+    padding-right: 7.5%;
   }
 
   .form-main__input--phone {
@@ -696,7 +708,7 @@
 
     &::before {
       top: 82px;
-      margin-right: 31px;
+      margin-right: 21px;
     }
 
     &::after {
