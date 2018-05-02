@@ -126,25 +126,27 @@
 
       <section class="example">
         <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">
-            Борис сбросил 5 кг за 2 месяца, просто
-            заменив свой обычный корм на Cat
-            Energy Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не
-            менял своих привычек и по-прежнему
-            спит по 16 часов в день.
-          </p>
-          <div class="example__stats">
-            <ul class="example__list">
-              <li class="example__value">5 кг</li>
-              <li class="example__parameter">снижение веса</li>
-            </ul>
-            <ul class="example__list">
-              <li class="example__value">60 дней</li>
-              <li class="example__parameter">затрачено времени</li>
-            </ul>
-            <b class="example__results">Затраты на питание: <span class="example__results-sum">15 000 руб.</span></b>
+          <div class="example__info">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__description">
+              Борис сбросил 5 кг за 2 месяца, просто
+              заменив свой обычный корм на Cat
+              Energy Slim. Отличный результат без
+              изнуряющих тренировок! При этом он не
+              менял своих привычек и по-прежнему
+              спит по 16 часов в день.
+            </p>
+            <div class="example__stats">
+              <ul class="example__list">
+                <li class="example__value">5 кг</li>
+                <li class="example__parameter">снижение веса</li>
+              </ul>
+              <ul class="example__list">
+                <li class="example__value">60 дней</li>
+                <li class="example__parameter">затрачено времени</li>
+              </ul>
+              <b class="example__results">Затраты на питание: <span class="example__results-sum">15 000 руб.</span></b>
+            </div>
           </div>
           <div class="slider">
             <div class="slider__pictures">
@@ -159,16 +161,12 @@
                 <img class="slider__cat-after-picture" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после похудения">
               </picture>
             </div>
-            <div class="slider__toggle slider__toggle--mobile">
+            <div class="slider__toggle">
               <input class="slider__input slider__input--before" type="radio" id="before" name="before-after" value="before" checked>
               <label class="slider__label slider__label--before" for="before">Было</label>
               <input class="slider__input slider__input--after" type="radio" id="after" name="before-after" value="after">
               <label class="slider__label slider__label--after" for="after">Стало</label>
-            </div>
-            <div class="slider__toggle slider__toggle--tablet">
-              <label class="slider__range-label slider__range-label--before">Было</label>
-              <input class="slider__range" type="range" value="2" min="1" max="3">
-              <label class="slider__range-label slider__range-label--after">Стало</label>
+              <div class="slider__controls"></div>
             </div>
           </div>
         </div>
