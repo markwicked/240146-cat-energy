@@ -79,6 +79,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .site-list__link--white {
+    color: #ffffff;
+  }
+}
+
 .site-list__active {
   position: relative;
   cursor: default;
@@ -91,5 +97,13 @@
     width: 100%;
     height: 2px;
     background-color: @color-primary;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__active--white {
+    &::after {
+      background-color: #ffffff;
+    }
   }
 }
