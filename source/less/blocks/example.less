@@ -1,44 +1,57 @@
 .example {
   padding-top: 17px;
-  padding-bottom: 36px;
+  padding-bottom: 35px;
   background-color: @gray-background;
 }
 
 @media (min-width: @tablet-width) {
   .example {
-    padding-top: 44px;
-    padding-bottom: 69px;
-    background: linear-gradient(to bottom, #ffffff 50%, @gray-background 50%);
+    padding-top: 50px;
+    padding-bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 619px, rgba(242, 242, 242, 0) 619px),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(234, 234, 234, 1) 50%);
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    padding-top: 81px;
-    padding-bottom: 68px;
-    background: linear-gradient(to bottom, #ffffff 217px, @gray-background 217px);
+    overflow: hidden;
+    margin-top: -46px;
+    padding-top: 46px;
+    padding-bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 173px, rgba(242, 242, 242, 0) 173px);
   }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 280px;
+  width: 280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: @padding-mobile;
 }
 
 @media (min-width: @tablet-width) {
   .example__wrapper {
-    max-width: 708px;
+    width: 708px;
     padding: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example__wrapper {
-    max-width: 1220px;
-    padding: 0 110px;
+    flex-direction: row;
+    position: relative;
+    width: 1220px;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 127px, rgba(242, 242, 242, 0) 127px),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 934px, rgba(234, 234, 234, 1) 934px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__info {
+    margin-right: 217px;
   }
 }
 
@@ -52,7 +65,8 @@
 
 @media (min-width: @tablet-width) {
   .example__title {
-    margin-bottom: 63px;
+    margin-top: -8px;
+    margin-bottom: 65px;
     font-size: 60px;
   }
 }
@@ -86,29 +100,30 @@
   }
 }
 
-.example__flex-container {
+.example__stats {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
   max-width: 280px;
-  min-height: 109px;
   margin-bottom: 34px;
 }
 
+
 @media (min-width: @tablet-width) {
-  .example__flex-container {
+  .example__stats {
     align-items: flex-start;
     max-width: 708px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example__flex-container {
+  .example__stats {
     max-width: 366px;
     min-height: 152px;
+    margin-bottom: 0;
   }
 }
 
@@ -116,7 +131,7 @@
   .list-reset();
   position: relative;
   width: 122px;
-  min-height: 54px - 14px;
+  height: 40px;
   padding-top: 14px;
   text-align: center;
   border: 1px solid #cdcdcd;
@@ -161,7 +176,6 @@
   top: 46px;
   left: 19px;
   width: 82px;
-  min-height: 25px;
   font-size: 12px;
   line-height: 12px;
   background-color: @gray-background;
@@ -190,6 +204,7 @@
 }
 
 .example__results {
+  margin-top: 36px;
   margin-left: 47px;
   font-weight: 400;
   line-height: 20px;
@@ -218,183 +233,5 @@
 @media (min-width: @desktop-width) {
   .example__results-sum {
     margin-left: 60px;
-  }
-}
-
-.example__cat-before,
-.example__cat-after {
-  margin-bottom: 33px;
-  vertical-align: bottom;
-}
-
-@media (min-width: @tablet-width) {
-  .example__cat-before,
-  .example__cat-after {
-    width: 677px;
-    height: 499px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__cat-before,
-  .example__cat-after {
-    margin-top: -626px;
-    margin-left: 635px;
-  }
-}
-
-.example__cat-before {
-  align-self: center;
-}
-
-.example__cat-after {
-  display: none;
-}
-
-.example__toggle {
-  display: flex;
-  align-self: center;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 55px;
-    z-index: 10;
-    width: 82px;
-    height: 12px;
-    background-color: #ffffff;
-    border: 1px solid #cdcdcd;
-    border-radius: 5px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .example__toggle {
-    width: 569px;
-
-    &::after {
-      top: 7px;
-      left: 70px;
-      width: 428px;
-      height: 6px;
-      background-color: #dcdcdc;
-      border: none;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__toggle {
-    margin-top: 25px;
-    margin-left: 647px;
-  }
-}
-
-.example__label {
-  z-index: 1000;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  &--before {
-    position: relative;
-    padding-right: 56px;
-
-    &::after {
-      content: "";
-      display: none;
-      position: absolute;
-      top: 7px;
-      left: 61px;
-      z-index: 100;
-      width: 35px;
-      height: 6px;
-      background-color: @color-primary;
-      border-radius: 5px;
-    }
-  }
-
-  &--after {
-    position: relative;
-    padding-left: 60px;
-
-    &::before {
-      content: "";
-      display: none;
-      position: absolute;
-      top: 7px;
-      right: 65px;
-      z-index: 100;
-      width: 35px;
-      height: 6px;
-      background-color: @color-primary;
-      border-radius: 5px;
-    }
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .example__label {
-    padding: 0;
-    font-size: 20px;
-    line-height: 20px;
-    height: 25px;
-    border-bottom: 1px dotted #bebebe;
-
-    &--before {
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        top: -7px;
-        left: 268px;
-        width: 32px;
-        height: 32px;
-        background-color: #ffffff;
-        border: 1px solid #dfdfdf;
-        border-radius: 50%;
-      }
-    }
-
-    &--after {
-      margin-left: auto;
-
-      &::after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 6px;
-        right: 280px;
-        width: 8px;
-        height: 8px;
-        background-color: #68b738;
-        border-radius: 50%;
-      }
-    }
-  }
-}
-
-.example__input {
-  display: none;
-}
-
-.example__input--before:checked ~ .example__label--before::after {
-  display: block;
-}
-
-.example__input--after:checked ~ .example__label--after::before {
-  display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .example__input--before:checked ~ .example__label--before::after,
-  .example__input--after:checked ~ .example__label--after::before {
-    display: none;
   }
 }

@@ -1,6 +1,18 @@
-.wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+@media (min-width: @desktop-width) {
+  .wrapper {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wrapper--form-main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper--form-main {
+    flex-direction: row;
+  }
 }

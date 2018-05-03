@@ -3,14 +3,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding-top: 23px;
+  padding-bottom: 17px;
   border-bottom: 1px solid #d9d9d9;
 }
 
 @media (min-width: @tablet-width) {
   .social {
+    padding-top: 14px;
     border-bottom: none;
   }
+}
+
+.social__link {
+  display: block;
+}
+
+.social__link:hover .social__svg {
+  fill: @color-primary;
+}
+
+.social__link:active .social__svg {
+  opacity: 0.3;
+}
+
+.social__svg {
+  fill: #666666;
 }
 
 .social__button {
@@ -23,20 +41,12 @@
   }
 }
 
-.social__button:last-child {
-  margin-right: 0;
+.social__button--vk {
+  margin-left: -11px;
 }
 
-.social__svg {
-  stroke: #696969;
-
-  &:hover {
-    stroke: @color-primary;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+.social__button:last-child {
+  margin-right: 0;
 }
 
 @media (min-width: @tablet-width) {
