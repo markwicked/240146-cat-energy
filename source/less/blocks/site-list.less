@@ -1,13 +1,14 @@
 .site-list {
   .list-reset();
+  display: none;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.site-list--closed {
-  display: none;
+.site-list--no-js {
+  display: block;
 }
 
 .site-list--opened {
@@ -80,7 +81,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .index-page .site-list__link {
+  .site-list__link--white {
     color: #ffffff;
   }
 }
@@ -101,7 +102,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .index-page .site-list__active {
+  .site-list__active--white {
     &::after {
       background-color: #ffffff;
     }
