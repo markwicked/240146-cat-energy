@@ -97,6 +97,7 @@
 
 @media (min-width: @desktop-width) {
   .form-main__fieldset {
+    overflow: hidden;
     margin: 0;
   }
 }
@@ -126,8 +127,13 @@
 }
 
 .form-main__label--text {
-  flex: 0 0 auto;
-  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-main__input--text {
+  margin-left: 13px;
 }
 
 .form-main__label:not(.form-main__label--owner) {
@@ -386,6 +392,12 @@
   overflow: hidden;
 }
 
+@media (min-width: @desktop-width) {
+  .form-main__title-container {
+    overflow: visible;
+  }
+}
+
 .form-main__info-title {
   position: relative;
   display: inline-block;
@@ -429,6 +441,7 @@
 @media (min-width: @desktop-width) {
   .form-main__info-title {
     display: block;
+    margin: 0;
     padding: 0;
     padding-top: 69px;
   }
@@ -489,8 +502,8 @@
 
     &::after {
       top: 92px;
-      left: 553px;
-      margin-left: 0;
+      left: 100%;
+      margin-left: 39px;
     }
   }
 }
@@ -638,7 +651,7 @@
 
     &::after {
       top: 90px;
-      left: 199px;
+      left: 100%;
     }
   }
 }
@@ -722,7 +735,6 @@
 
 @media (min-width: @desktop-width) {
   .form-main__additional-wrapper {
-    flex-wrap: nowrap;
     justify-content: space-between;
     width: 1220px;
   }
@@ -770,8 +782,8 @@
 
     &::after {
       top: 85px;
-      left: 251px;
-      margin-left: 0;
+      left: 100%;
+      margin-left: 19px;
     }
   }
 }
