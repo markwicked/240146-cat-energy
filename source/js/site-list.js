@@ -1,4 +1,4 @@
-  var toggle = document.querySelector (".main-nav__toggle");
+  var toggle = document.querySelector(".main-nav__toggle");
   var sitelist = document.querySelector(".site-list");
 
   toggle.classList.remove("main-nav__toggle--close");
