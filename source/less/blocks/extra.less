@@ -247,7 +247,6 @@
   align-items: center;
   margin: 0 auto 35px auto;
   width: 280px;
-  height: 289px;
   overflow: hidden;
   background: @color-primary url("../img/gift-photo-mobile@1x.jpg") no-repeat;
 
@@ -262,9 +261,9 @@
   .extra__gift {
     flex-direction: row;
     width: 708px;
-    height: 200px;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 27px;
+    padding-bottom: 13px;
     background: @color-primary url("../img/gift-photo-tablet@1x.jpg") no-repeat;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -278,7 +277,8 @@
   .extra__gift {
     flex-direction: column;
     width: 245px;
-    height: 289px;
+    max-height: 289px;
+    padding: 0;
     margin: 0;
     background: @color-primary url("../img/gift-photo-desktop@1x.jpg") no-repeat;
 
@@ -292,7 +292,7 @@
 .extra__svg {
   flex-shrink: 0;
   margin-top: 65px;
-  margin-bottom: 46px;
+  margin-bottom: 61px;
 }
 
 @media (min-width: @tablet-width) {
@@ -305,15 +305,15 @@
 
 @media (min-width: @desktop-width) {
   .extra__svg {
-    margin-top: 65px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 65px 0 62px 0;
   }
 }
 
 .extra__text {
   .font-arial();
   width: 165px;
+  margin: 0;
+  margin-bottom: 42px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -322,12 +322,14 @@
 
 @media (min-width: @tablet-width) {
   .extra__text {
+    margin-top: 32px;
     text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra__text {
+    margin: 0;
     text-align: center;
   }
 }
