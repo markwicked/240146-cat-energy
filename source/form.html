@@ -27,11 +27,11 @@
             </picture>
           </a>
             <!-- Кнопка открытия меню -->
-          <button class="main-nav__toggle main-nav__toggle--open" type="button">
+          <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--close" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <ul class="site-list site-list--closed">
+        <ul class="site-list site-list--no-js">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
@@ -66,13 +66,13 @@
             <div class="form-main__item-text">
               <label class="form-main__label form-main__label--text">
                 Вес (кг):*
-              <input class="form-main__input form-main__input--text" type="number" id="cat-weight" name="cat-weight" value="7" required="">
+              <input class="form-main__input form-main__input--text form-main__input--number" type="number" id="cat-weight" name="cat-weight" value="7" required="">
               </label>
             </div>
             <div class="form-main__item-text">
               <label class="form-main__label form-main__label--text">
                 Возраст (лет):
-              <input class="form-main__input form-main__input--text" type="number" id="cat-weight" name="cat-weight" value="7" required="">
+              <input class="form-main__input form-main__input--text form-main__input--number" type="number" id="cat-age" name="cat-age" value="7" required="">
               </label>
             </div>
           </fieldset>
@@ -173,6 +173,15 @@
     </section>
 
     <div class="map">
+      <picture class="map__pictures">
+        <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+        <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
+      </picture>
       <iframe class="map__yandex" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7edd54d373e5daf31074675ec9335eab0ac5c3cebf9b16cbc2cba75988fc6386&amp;source=constructor" height="400"></iframe>
     </div>
 
@@ -216,7 +225,7 @@
     </div>
   </footer>
 
-  <script src="js/site-list.js"></script>
+  <script src="js/index.js"></script>
 
   </body>
 </html>
